@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Вкусный уголок" - Собрать ланч</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lunch.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Кафе "Туркменистан"</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="lunch.html" class="active">Собрать ланч</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h2>Супы</h2>
+            <div class="dishes-grid" id="soups-grid">
+                <!-- Динамически заполняется через JS -->
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Главные блюда</h2>
+            <div class="dishes-grid" id="main-grid">
+                <!-- Динамически заполняется через JS -->
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Напитки</h2>
+            <div class="dishes-grid" id="drinks-grid">
+                <!-- Динамически заполняется через JS -->
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2>Сделать заказ</h2>
+            <form id="order-form">
+                <div class="order-summary">
+                    <h3>Ваш заказ</h3>
+                    <div id="no-selection">Ничего не выбрано</div>
+                    
+                    <div class="order-category" style="display: none;">
+                        <h4>Суп</h4>
+                        <p id="selected-soup"></p>
+                    </div>
+                    
+                    <div class="order-category" style="display: none;">
+                        <h4>Основное блюдо</h4>
+                        <p id="selected-main"></p>
+                    </div>
+                    
+                    <div class="order-category" style="display: none;">
+                        <h4>Напиток</h4>
+                        <p id="selected-drink"></p>
+                    </div>
+                    
+                    <div id="order-total" style="display: none;">
+                        <h4>Стоимость заказа: <span id="total-price">0</span> ₽</h4>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адрес доставки:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <input type="hidden" id="soup-keyword" name="soup">
+                <input type="hidden" id="main-keyword" name="main">
+                <input type="hidden" id="drink-keyword" name="drink">
+
+                <button type="submit">Заказать</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Контакты: Москва, ул.Проспект мира, д. 15</p>
+            <p>Телефон: +7 (495) 123-45-67</p>
+            <p>Email: info@turkmencafe.ru</p>
+            <p class="disclaimer">*Изображения блюд являются демонстрационными</p>
+        </div>
+    </footer>
+
+    <script src="scripts/dishes.js"></script>
+    <script src="scripts/displayDishes.js"></script>
+    <script src="scripts/order.js"></script>
+</body>
+</html>
