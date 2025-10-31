@@ -1,0 +1,158 @@
+/* Menu sections */
+.menu-section {
+    margin-bottom: 3rem;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Dishes grid */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Dish card */
+.dish-card {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+.dish-card:hover .add-button {
+    background-color: tomato;
+    color: white;
+}
+
+.dish-card img {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 1rem;
+}
+
+.dish-card .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dish-card .name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    flex: 1;
+}
+
+.dish-card .weight {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.add-button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design for lunch page */
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dish-card {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dish-card {
+        padding: 15px 20px;
+    }
+    
+    .menu-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Order section styles */
+.order-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+}
+
+.order-summary {
+    margin-bottom: 2rem;
+}
+
+.order-category {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6347;
+}
+
+/* Selected dish style */
+.dish-card.selected {
+    border: 2px solid tomato;
+}

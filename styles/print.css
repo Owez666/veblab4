@@ -1,0 +1,87 @@
+/* Print styles */
+@media print {
+    /* Hide unnecessary elements */
+    .nav-menu,
+    .cta-button,
+    .add-button {
+        display: none !important;
+    }
+    
+    /* Reset colors for printing */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    /* Header */
+    header {
+        background: white !important;
+        box-shadow: none !important;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    header h1 {
+        color: black !important;
+        font-size: 16pt;
+    }
+    
+    /* Main content */
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Hero section */
+    .hero {
+        background: white !important;
+        color: black !important;
+        padding: 1rem 0 !important;
+        border: 1px solid #ccc;
+    }
+    
+    /* Cards and sections */
+    .dish-card,
+    .about-content,
+    .hours {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+    
+    /* Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Links */
+    a {
+        color: black !important;
+        text-decoration: underline;
+    }
+    
+    /* Footer */
+    footer {
+        background: white !important;
+        color: black !important;
+        border-top: 1px solid #ccc;
+    }
+    
+    /* Ensure good contrast */
+    .dish-card .weight {
+        color: #333 !important;
+    }
+    
+    /* Page breaks */
+    .menu-section {
+        page-break-inside: avoid;
+    }
+    
+    /* Remove hover effects */
+    .dish-card:hover {
+        border: 1px solid #ccc !important;
+    }
+}
